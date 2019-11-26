@@ -12,4 +12,4 @@ electron,Node实现的大麦网抢票
 
 1.装包 npm install 2.启动 npm run start 3.打包 npm run buildapp
 
-![](https://github.com/xujizhong/Grab-Ticket/blob/master/image/demo.png?raw=true)
+![](https://github.com/xujizhong/Grab-Ticket/blob/master/image/demo.jpg?raw=true)
