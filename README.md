@@ -12,6 +12,6 @@ electron,Node实现的大麦网抢票
 
 使用方法：
 
-装包 npm install
-启动 npm run start
-打包 npm run buildapp
+1.装包 npm install
+2.启动 npm run start
+3.打包 npm run buildapp
