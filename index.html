@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+        <title>大麦网抢票</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="tips warning-tips">
+                <p>1.登陆大麦网账号，登陆后关闭窗口</p>
+                <p>2.在输入框中输入大麦网购买页面的网址</p>
+                <p>3.点击【打开大麦网网址】按钮</p>
+                <p>4.在页面出现后，点击【开始抢票】按钮</p>
+            </div>
+            <div class="tips danger-tips" id="error-msg">
+                <p></p>
+            </div>
+            <input type="textArea" id="url" placeholder="请输入大麦网购买网址" />
+            <button id="create">打开大麦网网址</button> 
+            <button id="grab">开始抢票</button>
+        </div>
+        <script src="./renderer.js"></script>
+    </body>
+</html>

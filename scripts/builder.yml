@@ -1,0 +1,62 @@
+
+appId: "com.damai.ticket"
+productName: "Damai-ticket"
+
+
+# https://www.electron.build/configuration/win
+win:
+  icon: "build/logo.ico"
+  target:
+    - target: nsis
+      arch:
+        - ia32
+        # - x64
+  extraResources:
+    - from: build/win/packages
+      to: build/win/packages
+  verifyUpdateCodeSignature: false
+  requestedExecutionLevel: "requireAdministrator"
+  signAndEditExecutable: false
+  signDlls: false
+
+# https://www.electron.build/configuration/mac
+mac:
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  icon: "build/logo.icns"
+  category: public.app-category.utilities
+  target: ["zip", "dmg"]
+
+
+# https://www.electron.build/configuration/nsis
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  allowElevation: true
+  installerIcon: "build/logo.ico"
+  uninstallerIcon: "build/logo.ico"
+  installerHeaderIcon: "build/logo.ico"
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: "Damai ticket"
+  # include: "build/script/installer.nsh"
+
+# https://www.electron.build/configuration/dmg
+dmg:
+  sign: false
+  icon: "build/logo.ico"
+  iconSize: 88
+  iconTextSize: 12
+  title: "${productName}"
+  contents:
+    - x: 410
+      y: 150
+      type: link
+      path: "/Applications"
+    - x: 130
+      y: 150
+      type: file
+  window:
+    width: 552
+    height: 310

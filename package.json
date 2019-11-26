@@ -1,0 +1,51 @@
+{
+    "name": "electron-quick-start",
+    "version": "1.0.0",
+    "description": "A minimal Electron application",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "buildapp": "electron-builder --config scripts/builder.yml"
+    },
+    "build": {
+        "productName": "damai-ticket",
+        "appId": "com.id",
+        "mac": {
+            "icon": "./logo.jpeg",
+            "category": "your.app.category.type"
+        },
+        "win": {
+            "icon": "./logo.jpeg"
+        }
+    },
+    "nsis": {
+        "oneClick": false,
+        "allowElevation": true,
+        "allowToChangeInstallationDirectory": true,
+        "installerIcon": "./logo.jpeg",
+        "uninstallerIcon": "./logo.jpeg",
+        "installerHeaderIcon": "./logo.jpeg",
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "shortcutName": "./logo.jpeg",
+        "include": "build/script/installer.nsh",
+        "script": "build/script/installer.nsh"
+    },
+    "repository": "https://github.com/electron/electron-quick-start",
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "demo"
+    ],
+    "author": "GitHub",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^7.1.2",
+        "electron-builder": "^21.2.0"
+    },
+    "dependencies": {
+        "axios": "^0.19.0"
+    }
+}
